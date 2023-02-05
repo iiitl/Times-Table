@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Times table</title>
-  </head>
-  <body>
-    <canvas id="drawing"></canvas>
-    <div style="position: absolute; top: 0; right: 0; padding: 100px">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Times table</title>
+  <style>
+    .primary {
+      display: flex;
+      flex-direction: column;
+    }
+    .score{
+      align-self: flex-end;
+    }
+    canvas{
+      height: 50%;
+      width: 50%;
+    }
+    @media screen and (max-width:800px) {
+      canvas{
+        height: 90%;
+        width: 90%;
+      }
+      
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="primary">
+    <div class="score">
       <p>Use Right and Left arrow keys to change!</p>
       <h1 id="info">Times Table Count: 2</h1>
     </div>
-
+      <canvas id="drawing"></canvas>
     <script src="Point.js"></script>
     <script src="main.js"></script>
-  </body>
+  </div>
+</body>
+
 </html>
