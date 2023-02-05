@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d");
 
 canvas.width = 700;
 canvas.height = 700;
-
+var num=document.getElementById("direct")
 const radius = 300;
 const numOfPoints = 500;
 var timesTableCount = 2;
@@ -58,6 +58,7 @@ var myInterval = setInterval(animate, 10);
 document.addEventListener("keydown", function (event) {
   if (event.key == "ArrowLeft") {
     timesTableCount--;
+    num.value=timesTableCount;
     clearInterval(myInterval);
     clearScreen();
     for (var i = 1; i <= points.length; i++) {
@@ -69,6 +70,7 @@ document.addEventListener("keydown", function (event) {
   }
   if (event.key == "ArrowRight") {
     timesTableCount++;
+    num.value=timesTableCount;
     clearInterval(myInterval);
     clearScreen();
     for (var i = 1; i <= points.length; i++) {
@@ -79,3 +81,17 @@ document.addEventListener("keydown", function (event) {
     ).innerHTML = `Times Table Count: ${timesTableCount}`;
   }
 });
+
+
+function done(){
+  if(num.value>2){
+  timesTableCount=num.value;
+  clearInterval(myInterval);
+  clearScreen();
+  for (var i = 1; i <= points.length; i++) {
+    drawTimesTable(timesTableCount, i);
+  }
+  document.querySelector(
+    "#info"
+  ).innerHTML = `Times Table Count: ${timesTableCount}`;
+}}
