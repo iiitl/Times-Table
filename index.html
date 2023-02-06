@@ -7,25 +7,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Times table</title>
   <style>
+    body{
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
     .primary {
       display: flex;
       flex-direction: column;
+      flex-basis: 95vh;
     }
     .score{
       align-self: flex-end;
     }
     canvas{
-      height: 50%;
-      width: 50%;
+      height: 60vh;
+      width: 60vh;
     }
     @media screen and (max-width:800px) {
       canvas{
-        height: 90%;
-        width: 90%;
+        height: 80vw;
+        width: 80vw;
       }
       
     }
-    
+    footer{
+      flex-basis: 5vh;
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(62, 59, 59);
+      position: sticky;
+      color: white;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }    
+    footer  a{
+      text-decoration: underline;
+      text-align: center;
+      color: white;
+    }
+    .resource{
+      display: flex;
+      justify-content: center;
+      gap: 30%;
+      margin-bottom: 1%;
+    }
   </style>
 </head>
 
@@ -39,6 +67,14 @@
     <script src="Point.js"></script>
     <script src="main.js"></script>
   </div>
+  <footer>
+    <p style="text-align:center;">Resources</p>
+    <div class="resource">
+      <a href="https://www.youtube.com/watch?v=qhbuKbxJsk8">Times Tables, Mandelbrot and the Heart of Mathematics</a>
+      <a href="https://www.youtube.com/watch?v=bl3nc_a1nvs">Coding Challenge #133: Times Tables Cardioid Visualization</a>
+    </div>
+
+  </footer>
 </body>
 
 </html>
