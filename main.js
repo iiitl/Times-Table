@@ -1,10 +1,10 @@
 const canvas = document.querySelector("#drawing");
 const ctx = canvas.getContext("2d");
 
-canvas.width = 700;
-canvas.height = 700;
+canvas.width = 600;
+canvas.height = 600;
 
-const radius = 300;
+const radius = 250;
 const numOfPoints = 500;
 var timesTableCount = 2;
 
